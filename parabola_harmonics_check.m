@@ -9,13 +9,13 @@ f = @(n) (-1)^n * cos(n * t) ./ n.^2;
 y1 = zeros(size(t));
 
 % Loop to accumulate values
-for n = 1:50 %number of harmonics
+for n = 1:150 %number of harmonics
     y1 = y1 + f(n);
 end
 
 %plotting functions
 
-plot(t, y, t, pi^2/3 + 4.*y1);
+plot(t, y, t, pi^2/3 + 4.*y1); %add offset and coefficient to series
 
 set(gca, 'XAxisLocation', 'origin');
 set(gca, 'YAxisLocation', 'origin');
