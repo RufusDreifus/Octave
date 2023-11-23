@@ -1,8 +1,13 @@
+%Approximation of parabola with trigonometric series. 
+%Animation of approximation with different quantity of harmonics.
+%Written in Octave.
+
 t = linspace(-3, 3, 1000);
 y = t.^2;
 n = 30; % number of harmonics
-% Create a figure
-figure;
+
+% Create a figure and figure name
+figure ('name', 'Parabola Approximation');
 
 for n = 1:n 
     y1 = zeros(size(t));
